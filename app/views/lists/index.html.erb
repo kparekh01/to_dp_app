@@ -1,0 +1,18 @@
+<h1>To Do List</h1>
+
+
+<div ng-app="app">
+  <div ng-controller="list">
+
+      <div ng-repeat="task in list">
+      <h1 ng-class="{strike: task.complete}" ng-click="toggleTask(task)">{{ task.text }}</h1>
+      </div>
+    <input type = "text" placeholder="task" ng-model="task.text">
+    <button ng-click ="addTask(task)">Add Task!</button>
+
+    <p><button ng-click ="clear(task)">Clear completed Task!</button></p>
+
+    <h2>{{count}}</h2>
+
+  </div>
+</div>
